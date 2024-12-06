@@ -1,1 +1,22 @@
+*{
+    box-sizing: border-box;
+}
 
+body    {
+    min: height 0%;
+}
+
+/*rules for page*/
+.content-area   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}{}
+
+
+.jacket {
+    display: none; /* Hide all jackets by default */
+}
