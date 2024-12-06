@@ -1,6 +1,6 @@
 /* General Layout */
 body {
-    background-image: url('images/bkgrnd.png');
+    background-image: url('images/bckgrnd.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Optional for a parallax effect */
