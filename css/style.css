@@ -1,22 +1,59 @@
-*{
-    box-sizing: border-box;
+/* General Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-body    {
-    min: height 0%;
-}
-
-/*rules for page*/
-.content-area   {
+.builder-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}{}
-
-
-.jacket {
-    display: none; /* Hide all jackets by default */
+    gap: 20px;
+    padding: 20px;
 }
+
+/* Jackets Container */
+#jackets-container {
+    position: relative;  /* Position relative for absolute positioning of jackets */
+    width: 100%;
+    height: 500px; /* Adjust to fit your design */
+    background-color: #fff; /* Optional: Background for visibility */
+    border: 1px solid #ccc; /* Optional: Border for debugging */
+}
+
+/* Individual Jackets */
+.jacket {
+    position: absolute;  /* Allows positioning within the container */
+    display: none; /* Hide all jackets initially */
+}
+
+/* Small Patches and Back Patches */
+.smpatch, .backpatch {
+    position: absolute;  /* Allow positioning within the jackets container */
+    cursor: pointer;  /* Indicate these elements are interactive */
+    transition: transform 0.3s ease;  /* Optional: Add a smooth hover effect */
+}
+
+.smpatch:hover, .backpatch:hover {
+    transform: scale(1.1);  /* Slightly enlarge the patch on hover */
+}
+
+#swatch-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #eaeaea; /* Optional for visibility */
+    border: 1px solid #ccc;   /* Optional for debugging */
+}
+
+#swatch-container rect {
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Hover effect */
+}
+
+#swatch-container rect:hover {
+    transform: scale(1.1); /* Optional for hover scaling */
+}
+
